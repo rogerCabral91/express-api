@@ -13,4 +13,8 @@ function saveProduct(product) {
   return product;
 }
 
-module.exports = { saveProduct };
+function getProduct(id) {
+  return products[id] || {};
+}
+
+module.exports = { saveProduct, getProduct };
