@@ -17,4 +17,8 @@ function getProduct(id) {
   return products[id] || {};
 }
 
-module.exports = { saveProduct, getProduct };
+function getProducts() {
+  return Object.values(products);
+}
+
+module.exports = { saveProduct, getProduct, getProducts };
