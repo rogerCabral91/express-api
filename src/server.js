@@ -8,6 +8,10 @@ app.get("/products", (req, res, next) => {
   res.send(database.getProducts());
 });
 
+app.get("/products/:id", (req, res, next) => {
+  res.send(database.getProduct());
+});
+
 app.listen(port, () => {
   console.log(`Server is now running on port ${port}`);
 });
