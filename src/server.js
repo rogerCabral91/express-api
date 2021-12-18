@@ -12,6 +12,14 @@ app.get("/products/:id", (req, res, next) => {
   res.send(database.getProduct());
 });
 
+app.post("/products", (req, res, next) => {
+    const product = database.saveProduct({
+        name: req.body.name,
+        price: req.body.price
+    });
+    res.send(product)
+})
+
 app.listen(port, () => {
   console.log(`Server is now running on port ${port}`);
 });
