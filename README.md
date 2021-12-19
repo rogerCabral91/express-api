@@ -66,16 +66,21 @@ $ npm start
 ## Using the API
 ### Create
 In the API client use the POST method to insert data via form-encode passing the name and price keys with their respective values through Body Request;
+![Create](.github/create.png)
 
 ### Read
 To list ALL values use the GET method in '/products';
+![ReadAll](./.github/readAll.png)
 To list a specific entry use the GET method passing as parameter the desired ID, for example, 'products/2';
+![Read](./.github/read.png)
 
 ### Update
 Use the same creation procedure but using the PUT method and passing the ID of the entry you want to update as a parameter, for example, 'products/7' changing the name to 'Updated Product' and the price to 9.99;
+![Update](./.github/update.png)
 
 ### Delete
 Using the DELETE method, pass as a parameter the ID you want to delete, for example, delete the item ID 4;
+![Delete](./.github/delete.png)
 
 ## Technologies
 
