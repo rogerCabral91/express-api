@@ -4,6 +4,8 @@
 
 ## Preview
 
+<img alt="License: MIT" src="https://img.shields.io/github/license/rogerCabral91/express-api" />
+
 Sample preview running the API:
 
 ![Preview](.github/preview.gif)
