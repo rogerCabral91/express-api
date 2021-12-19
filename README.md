@@ -14,21 +14,19 @@
 </h4>
 
 <p align="center">
-	<a href="#-about">About</a> •
-	<a href="#-features">Features</a> •
-	<a href="#-preview">Preview</a> • 
-	<a href="#-requirements">Requirements</a> • 
-	<a href="#-tecnologias">Tecnologias</a> • 
-	<a href="#-contribuidores">Contribuidores</a> • 
-	<a href="#-autor">Autor</a> • 
-	<a href="#user-content--licença">Licença</a>
+	<a href="#about">About</a> •
+	<a href="#features">Features</a> • 
+	<a href="#preview">Preview</a> • 
+	<a href="#requirements">Requirements</a> • 
+	<a href="#running-the-api">Running the API</a> •
+	<a href="#using-the-api">Using the API</a> •
+	<a href="#technologies">Technologies</a>
 </p>
 
-## 💻 About
+## About
 This API allows you to see the functioning of a CRUD working with a emulated database with the data persisting in memory, that is, once restarted the API loses the data.
 
-## ⚙️ Features
-
+## Features
 - [x] Create a product
 - [x] Read all products
 - [x] Read a single product
@@ -36,7 +34,7 @@ This API allows you to see the functioning of a CRUD working with a emulated dat
 - [x] Delete a product
 - [ ] Error handling
 
-## 🖼️ Preview
+## Preview
 
 Sample preview running the API:
 
@@ -48,33 +46,41 @@ Before starting, you will need to have the following tools installed on your mac
 [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/).
 Also it's nice to have an editor to work with code like [VS Code](https://code.visualstudio.com/) with the extension [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client), or an application like [Postman](postman.com) or [Insomnia](https://insomnia.rest/)
 
-## 🎲 Rodando o Back End (servidor)
+## Running the API
 
 ```bash
-# Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+# Clone this repository
+$ git clone https://github.com/rogerCabral91/express-api.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
+# Access the project folder in the terminal/cmd
+$ cd express-api
 
-# Vá para a pasta server
-$ cd server
-
-# Instale as dependências
+# Install dependencies
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+# Run the application
+$ npm start
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+# The server will start on port:3003 - go to <http://localhost:3003>
 ```
-## 🛠 Tecnologias
+## Using the API
+### Create
+In the API client use the POST method to insert data via form-encode passing the name and price keys with their respective values through Body Request;
 
-As seguintes ferramentas foram usadas na construção do projeto:
+### Read
+To list ALL values use the GET method in '/products';
+To list a specific entry use the GET method passing as parameter the desired ID, for example, 'products/2';
 
-- [Expo](https://expo.io/)
+### Update
+Use the same creation procedure but using the PUT method and passing the ID of the entry you want to update as a parameter, for example, 'products/7' changing the name to 'Updated Product' and the price to 9.99;
+
+### Delete
+Using the DELETE method, pass as a parameter the ID you want to delete, for example, delete the item ID 4;
+
+## Technologies
+
+The following tools were used in the construction of the project:
+
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Express.js](https://expressjs.com/)
 
