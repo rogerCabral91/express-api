@@ -13,7 +13,7 @@ app.get("/products", (req, res, next) => {
 });
 
 app.get("/products/:id", (req, res, next) => {
-  res.send(database.getProduct());
+  res.send(database.getProduct(req.params.id));
 });
 
 app.post("/products", (req, res, next) => {
